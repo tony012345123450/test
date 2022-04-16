@@ -1,0 +1,99 @@
+body {
+    background-image: url("./adirondack.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+a {
+    text-decoration: none;
+}
+
+button-box {
+    display: flex;
+    justify-content: space-evenly;
+    height: 5vw;
+    width: 50%;
+    margin: auto;
+    padding: 1vw;
+}
+
+button-box button {
+    background-color: transparent;
+    border: 2px solid lightgrey;
+    padding: 0;
+    height: 100%;
+    width: 49%;
+}
+
+button-box button:disabled {
+    background-color: black;
+    background-color: rgba(0, 0, 0, 50%);
+}
+
+button-box .borderBox {
+    background-color: lightgrey;
+    background-color: rgba(0, 0, 0, 10%);
+    border: 2px solid white;
+    height: calc(100% - 8px);
+    width: calc(100% - 8px);
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button-box .borderBox p {
+    font-family: 'Akshar', serif;
+    font-size: 2.5vw;
+    color: white;
+}
+
+ul {
+    
+    background-color: rgba(0, 0, 0, 10%);
+    justify-content: space-around;
+    width: 50%;
+    margin: auto;
+    display: flex;
+    padding: 0px;
+}
+
+li {
+    display: inline;
+    float: left;
+    width: 10%;
+    max-width: 5vmax;
+    max-height: 5vmax;
+}
+
+li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+li a svg {
+    width: 100%;
+    height: 100%;
+    fill: whitesmoke;
+    opacity: 90%;
+}
+
+.vertCenter {
+    /* Thanks W3Schools */
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+h1 {
+    font-family: 'Akshar', serif;
+    font-weight: 600;
+    text-align: center; 
+    margin: 0; 
+    font-size: 10vw;
+    color: white;
+}

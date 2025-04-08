@@ -16,9 +16,25 @@
         gtag('js', new Date());
         gtag('config', 'G-3Y2R8TE08C');
     </script>
+    <script>
+        <!-- thanks chatgpt -->
+        const lazyBackgrounds = document.querySelectorAll('.lazy-bg');
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const el = entry.target;
+                    const bg = el.getAttribute('data-bg');
+                    el.style.backgroundImage = `url(${bg})`;
+                    observer.unobserve(el); // Stop observing once loaded
+                }
+            });
+        });
+
+        lazyBackgrounds.forEach(bg => observer.observe(bg));
+    </script>
 </head>
 
-<body data-bg="./splash_assets/adirondack.jpg">
+<body class="lazy-bg" data-bg="./splash_assets/adirondack.jpg">
     <div class="vertCenter" style="width: 100%; background-color: rgb(0, 0, 0, 40%);">
     <div>
         <!-- Center Text -->

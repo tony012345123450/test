@@ -16,22 +16,6 @@
         gtag('js', new Date());
         gtag('config', 'G-3Y2R8TE08C');
     </script>
-    <script>
-        <!-- thanks chatgpt -->
-        const lazyBackgrounds = document.querySelectorAll('.lazy-bg');
-        const observer = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const el = entry.target;
-                    const bg = el.getAttribute('data-bg');
-                    el.style.backgroundImage = `url(${bg})`;
-                    observer.unobserve(el); // Stop observing once loaded
-                }
-            });
-        });
-
-        lazyBackgrounds.forEach(bg => observer.observe(bg));
-    </script>
 </head>
 
 <body class="lazy-bg" data-bg="./splash_assets/adirondack.jpg">
@@ -89,6 +73,22 @@
         </button-box>
     </div>
     </div>
+    <script>
+        <!-- thanks chatgpt -->
+        const lazyBackgrounds = document.querySelectorAll('.lazy-bg');
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const el = entry.target;
+                    const bg = el.getAttribute('data-bg');
+                    el.style.backgroundImage = `url(${bg})`;
+                    observer.unobserve(el); // Stop observing once loaded
+                }
+            });
+        });
+
+        lazyBackgrounds.forEach(bg => observer.observe(bg));
+    </script>
 </body>
 
 </html>

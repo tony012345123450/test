@@ -1,9 +1,10 @@
 body {
-    background-image: url("./adirondack.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-position: center;
+    background-color: #ccc; /* fallback color */
     background-size: cover;
+    background-position: center;
+    transition: background-image 0.5s ease-in-out;
 }
 
 a {
